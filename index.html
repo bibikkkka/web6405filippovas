@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="login.html">Логин</a>
+        <a href="user_info.html">Информация пользователя</a>
+        <a href="data.html">Данные из БД</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Загрузить видео</h1>
+
+    <!-- Форма для загрузки видео -->
+    <form action="/upload-video" method="post" enctype="multipart/form-data">
+        <input type="file" name="video_file" accept="video/*">
+        <button type="submit">Отправить</button>
+    </form>
+</main>
+
+<footer>
+    © 2024 Проект Филиппова А.С. по дисциплине WEB-программирование
+</footer>
+</body>
+</html>
