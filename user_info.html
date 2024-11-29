@@ -9,28 +9,32 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Главная</a>
-            <a href="login.html">Логин</a>
-            <a href="data.html">Данные из базы</a>
+            <div class="left-nav">
+                <a href="index.html" class="nav-button">Главная</a>
+                <a href="data.html" class="nav-button">Данные</a>
+            </div>
+            <div class="right-nav">
+                <a href="login.html" class="nav-button">Логин</a>
+            </div>
         </nav>
     </header>
     
     <main>
-        <h1>Информация пользователя</h1>
+        <h1 class="align-center">Информация пользователя</h1>
         
         <!-- Таблица с информацией пользователя -->
-        <table border="1">
+        <table border="1" class="table">
             <tr>
-                <th>Имя</th>
-                <td>Александр</td>
+                <th class="align-right">Имя</th>
+                <td class="align-left">Александр</td>
             </tr>
             <tr>
-                <th>Сергеевич</th>
-                <td>Филиппов</td>
+                <th class="align-right">Сергеевич</th>
+                <td class="align-left">Филиппов</td>
             </tr>
             <tr>
-                <th>Адрес электронной почты</th>
-                <td>ivanov@example.com</td>
+                <th class="align-right">Адрес электронной почты</th>
+                <td class="align-left">ivanov@example.com</td>
             </tr>
         </table>
     </main>
