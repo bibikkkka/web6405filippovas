@@ -7,7 +7,7 @@ body {
     min-height: 100vh; /* Минимальная высота body */
     display: flex;
     flex-direction: column; /* Делаем layout колонкой */
-    background-image: url('/images/backround.jpg');
+    background-image: url('/lab2/images/backround.jpg');
 }
 
 header {
