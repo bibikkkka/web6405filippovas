@@ -1,13 +1,12 @@
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 15; /* Убираем внешние отступы */
-    padding: 15;
+    margin: 15px; /* Убираем внешние отступы */
+    padding: 15px;
     min-height: 100vh; /* Минимальная высота body */
     display: flex;
     flex-direction: column; /* Делаем layout колонкой */
-    background-image: url('/lab2/images/backround.jpg');
+    background-image: url("lab2/images/backround.jpg");
 }
 
 header {
@@ -25,8 +24,6 @@ header {
 .right-nav {
     float: right;
 }
-
-
 
 .nav-button {
     display: inline-block;
