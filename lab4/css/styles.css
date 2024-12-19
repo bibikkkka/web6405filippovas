@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    padding: 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(34, 143, 252);
+    padding: 10px;
+    height: 5%; /* Увеличим высоту заголовка */ 
+    border-radius: 25px;
+}
+
+
+.left-nav {
+    display: inline-block;
+}
+
+.right-nav {
+    float: right;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: #06f; /* Цвет кнопки */
+    color: white; /* Белый текст */
+    padding: 10px 30px;
+    border-radius: 25px; /* Закругленные углы */
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.main {
+    flex: 1; /* Растягиваем main, чтобы занять оставшееся пространство между header и footer */
+    display: flex;
+    flex-direction: column; /* Содержимое идет вертикально */
+    align-items: center; /* Горизонтально центрируем содержимое */
+    justify-content: center; /* Вертикально центрируем содержимое */
+    padding: 20px;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Фиксируем футер внизу */
+    bottom: 0;
+    width: 100%; /* Ширина футера должна занимать всю ширину страницы */
+}
+
+/* Стилизация таблицы */
+table {
+    width: 99%;
+    padding: 15px;
+    margin: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(34, 143, 252);;
+    color: white;
+}
+
+td:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Выравнивание в таблице */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}

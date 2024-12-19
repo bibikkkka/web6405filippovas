@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логин</title>
+    <link rel="stylesheet" href="/lab4/css/styles.css">
+    <script src="/lab4/js/login.js" defer></script>
+</head>
+<body>
+<header>
+    <nav class="left-nav">
+        <a href="index.html" class="nav-button">Главная</a>
+        <a href="user_info.html" class="nav-button">Информация пользователя</a>
+        <a href="data.html" class="nav-button">Данные из БД</a>
+    </nav>
+</header>
+
+<main class="main">
+    <h1>Вход в систему</h1>
+
+    <form action="/login" method="post" onsubmit="handleSubmit(event)">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <div class="align-center">
+            <button type="submit" class="nav-button">Войти</button>
+        </div>
+    </form>
+</main>
+
+<footer>
+    © 2024 Проект Филиппова А.С. по дисциплине WEB-программирование
+</footer>
+</body>
+</html>
