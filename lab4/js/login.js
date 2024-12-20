@@ -32,7 +32,10 @@ function handleSubmit(event) {
         .then(response => {
             if (response.ok) {
                 console.log('Успешный вход');
-                window.location.href = 'index.html';
+
+                addToHistory(username);
+
+                //window.location.href = 'index.html';
             } else {
                 console.error('Ошибка при входе');
                 alert("Ошибка. Проверьте ваши учетные данные.");
@@ -44,14 +47,52 @@ function handleSubmit(event) {
         });
 }
 
+function addToHistory(username) {
+    const tableBody = document.getElementById('historyTableBody');
+
+    const newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
+        <td>${username}</td>
+    `;
+
+    tableBody.appendChild(newRow);
+}
+
+function loadHistory() {
+    fetch('http://localhost:3000/login')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Сеть не в порядке');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const tableBody = document.getElementById('historyTableBody');
+            tableBody.innerHTML = '';
+
+            data.forEach(entry => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${entry.username}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Не удалось загрузить историю посещений. Пожалуйста, попробуйте позже.');
+        });
+}
+
+document.addEventListener('DOMContentLoaded', loadHistory);
 
 function validateUsername(username) {
-    const usernameRegex = /^[a-zA-Zа-яА-ЯёЁ0-9]+$/; // Могут быть только буквы и цифры
+    const usernameRegex = /^[a-zA-Zа-яА-ЯёЁ0-9]+$/;
     return usernameRegex.test(username);
 }
 
-
 function validatePassword(password) {
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{2,}$/; // Должен содержать хотя бы 1 букву и 1 цифру
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{2,}$/;
     return passwordRegex.test(password);
 }

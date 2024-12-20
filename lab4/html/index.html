@@ -10,6 +10,7 @@
     <header>
         <nav>
             <div class="left-nav">
+                <a href="index.html" class="nav-button">Главная</a>
                 <a href="data.html" class="nav-button">Данные</a>
                 <a href="user_info.html" class="nav-button">Информация о пользователе</a>
             </div>
@@ -19,11 +20,11 @@
         </nav>    
     </header>
 
-    <main class="main">
+    <main class="main-video">
         <h1>Загрузить видео</h1>
-        <form action="/upload-video" method="post" enctype="multipart/form-data">
+        <form action="/upload-video" method="post" enctype="multipart/form-data" class="form-video">
             <input type="file" name="video_file" accept="video/*">
-            <button type="submit" class="nav-button">Отправить</button>
+            <button type="submit" class="nav-video">Отправить</button>
         </form>
     </main>
 

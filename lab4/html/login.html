@@ -9,14 +9,17 @@
 </head>
 <body>
 <header>
-    <nav class="left-nav">
+    <div class="left-nav">
         <a href="index.html" class="nav-button">Главная</a>
-        <a href="user_info.html" class="nav-button">Информация пользователя</a>
-        <a href="data.html" class="nav-button">Данные из БД</a>
-    </nav>
+        <a href="data.html" class="nav-button">Данные</a>
+        <a href="user_info.html" class="nav-button">Информация о пользователе</a>
+    </div>
+    <div class="right-nav">
+        <a href="login.html" class="nav-button">Логин</a>
+    </div>
 </header>
 
-<main class="main">
+<main class="main-log">
     <h1>Вход в систему</h1>
 
     <form id="loginForm" action="/login" method="post" onsubmit="handleSubmit(event)">
@@ -25,11 +28,21 @@
 
         <label for="password">Пароль:</label>
         <input type="password" id="password" name="password" required><br><br>
-        <div class="align-center">
-            <button type="submit" class="nav-button">Войти</button>
+        <div class="align-center-log">
+            <button type="submit" class="nav-log">Войти</button>
         </div>
     </form>
 
+    <h2>История посещений</h2>
+    <table border="1" class="table">
+        <thead>
+        <tr>
+            <th>Имя пользователя</th>
+        </tr>
+        </thead>
+        <tbody id="historyTableBody">
+        </tbody>
+    </table>
 </main>
 
 <footer>

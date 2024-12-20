@@ -8,12 +8,11 @@ body {
 }
 
 header {
-    background-color: rgb(34, 143, 252);
+    background-color: rgba(115, 103, 73, 0.42);
     padding: 10px;
-    height: 5%; /* Увеличим высоту заголовка */ 
+    height: 5%;
     border-radius: 25px;
 }
-
 
 .left-nav {
     display: inline-block;
@@ -25,27 +24,25 @@ header {
 
 .nav-button {
     display: inline-block;
-    background-color: #06f;
+    background-color: rgba(16, 79, 152, 0.85);
     color: white;
-    padding: 10px 30px;
+    padding: 20px;
     border-radius: 25px;
     text-decoration: none;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 10px;
     transition: transform 0.3s ease;
 }
 
 .nav-button:hover {
-    transform: scale(1.1);/* Увеличение на 20% */
+    transform: scale(1.1);
 }
 
-
 .main {
-    flex: 1; /* Растягиваем main, чтобы занять оставшееся пространство между header и footer */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Содержимое идет вертикально */
-    align-items: center; /* Горизонтально центрируем содержимое */
-    justify-content: center; /* Вертикально центрируем содержимое */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -53,12 +50,11 @@ footer {
     background-color: lightgray;
     text-align: center;
     padding: 10px;
-    position: fixed; /* Фиксируем футер внизу */
+    position: fixed;
     bottom: 0;
-    width: 100%; /* Ширина футера должна занимать всю ширину страницы */
+    width: 100%;
 }
 
-/* Стилизация таблицы */
 table {
     width: 99%;
     padding: 15px;
@@ -72,7 +68,7 @@ th, td {
 }
 
 th {
-    background-color: rgb(34, 143, 252);;
+    background-color: rgba(49, 110, 194, 0.84);
     color: white;
 }
 
@@ -80,7 +76,6 @@ td:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Выравнивание в таблице */
 .align-left {
     text-align: left;
 }
@@ -91,4 +86,116 @@ td:nth-child(even) {
 
 .align-right {
     text-align: right;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-log {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    background-color: rgba(109, 149, 191, 0.63);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    grid-column: 1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    grid-column: 1;
+}
+
+input[type="text"],
+input[type="password"] {
+    grid-column: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: rgba(16, 73, 152, 0.22);
+    outline: none;
+}
+
+.align-center-log {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-log {
+    background-color: rgb(62, 50, 9);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-log:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.nav-button:hover {
+    background-color:#3484ef ;
+    transform : scale(1.05);
+}
+.main-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    min-height: 30%;
+    min-width: 75%;
+    background-color: rgba(16, 73, 152, 0.22);
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.form-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.nav-video {
+    background-color: rgb(62, 50, 9);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-video:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
