@@ -19,7 +19,7 @@
 <main class="main">
     <h1>Вход в систему</h1>
 
-    <form action="/login" method="post" onsubmit="handleSubmit(event)">
+    <form id="loginForm" action="/login" method="post" onsubmit="handleSubmit(event)">
         <label for="username">Имя пользователя:</label>
         <input type="text" id="username" name="username" required><br><br>
 
@@ -29,6 +29,7 @@
             <button type="submit" class="nav-button">Войти</button>
         </div>
     </form>
+
 </main>
 
 <footer>

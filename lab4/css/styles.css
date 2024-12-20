@@ -25,14 +25,20 @@ header {
 
 .nav-button {
     display: inline-block;
-    background-color: #06f; /* Цвет кнопки */
-    color: white; /* Белый текст */
+    background-color: #06f;
+    color: white;
     padding: 10px 30px;
-    border-radius: 25px; /* Закругленные углы */
+    border-radius: 25px;
     text-decoration: none;
     margin-right: 10px;
     margin-left: 10px;
+    transition: transform 0.3s ease;
 }
+
+.nav-button:hover {
+    transform: scale(1.1);/* Увеличение на 20% */
+}
+
 
 .main {
     flex: 1; /* Растягиваем main, чтобы занять оставшееся пространство между header и footer */

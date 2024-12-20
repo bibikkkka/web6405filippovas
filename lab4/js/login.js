@@ -12,28 +12,22 @@ function handleSubmit(event) {
         password: password
     };
 
-    const jsonData = JSON.stringify(data);
-
-    console.log(jsonData);
-
     if (!usernameValid) {
         alert("Имя пользователя должно содержать только буквы и цифры.");
-        console.log("Имя пользователя должно содержать только буквы и цифры.")
         return;
     }
 
     if (!passwordValid) {
         alert("Пароль должен содержать хотя бы одну букву и одну цифру.");
-        console.log("Пароль должен содержать хотя бы одну букву и одну цифру.")
         return;
     }
 
-    fetch('/login', {
+    fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: jsonData
+        body: JSON.stringify(data)
     })
         .then(response => {
             if (response.ok) {
@@ -41,7 +35,7 @@ function handleSubmit(event) {
                 window.location.href = 'index.html';
             } else {
                 console.error('Ошибка при входе');
-                alert("Ошибка при входе. Проверьте ваши учетные данные.");
+                alert("Ошибка. Проверьте ваши учетные данные.");
             }
         })
         .catch(error => {
@@ -50,13 +44,14 @@ function handleSubmit(event) {
         });
 }
 
+
 function validateUsername(username) {
     const usernameRegex = /^[a-zA-Zа-яА-ЯёЁ0-9]+$/; // Могут быть только буквы и цифры
     return usernameRegex.test(username);
 }
 
+
 function validatePassword(password) {
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{2,}$/; // Должен содержать хотя бы 1 букву и 1 цифру
     return passwordRegex.test(password);
 }
-

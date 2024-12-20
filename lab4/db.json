@@ -1,9 +1,41 @@
 {
   "users": [
-    { "id": 1, "name": "Александр Филиппов", "email": "alexfil1402@example.com" },
-    { "id": 2, "name": "Гретель", "email": "gr@example.com" },
-    { "id": 3, "name": "Гензель", "email": "gazu@example.com" },
-    { "id": 3, "name": "Стул", "email": "table@example.com" },
-    { "id": 3, "name": "Стол", "email": "chair@example.com" }
+    {
+      "id": 1,
+      "name": "Александр Филиппов",
+      "email": "alexfil1402@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Гретель",
+      "email": "gr@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Гензель",
+      "email": "gazu@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Стул",
+      "email": "table@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Стол",
+      "email": "chair@example.com"
+    }
+  ],
+  "login": [
+    {
+      "id": "41e4",
+      "username": "alexfil",
+      "password": "fil1234"
+    },
+    {
+      "id": "dd68",
+      "username": "bob",
+      "password": "kelsow"
+    }
   ]
 }
